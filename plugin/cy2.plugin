@@ -4,7 +4,7 @@
 脚本功能： ***
 软件版本：++
 下载地址：苹果商店下载
-脚本作者：
+脚本作者：WeiGie
 更新时间：2024年2月20日 06:47
 电报频道： 
 问题反馈：
@@ -12,26 +12,30 @@
 
 */
 
-
 #!name=彩2
 
 #!desc=彩2
 
 #!homepage=https://1.1
 
-#!author= ddgksf2013
+#!author= WeiGie
 
 #!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/caiyun.png
 
-[MITM]
-
-hostname=*.caiyunapp.*,*cyapi*
+[Rewrite]
+# 普通版广告
+^https:\/\/ad\.cyapi\.cn\/v2\/req\?app_name=weather - reject-dict
 
 [Script]
+# 赏叶赏花
+http-response ^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\?app_name=weather script-path=https://raw.githubusercontent.com/comppoo/MyOwn/main/plugin/cy22.jss, requires-body=true, timeout=60, tag=cytq
 
-http-response ^http[s]?:\/\/biz\.(caiyunapp|cyapi)\.(com|cn)\/v2\/user.*$ requires-body=1,script-path=https://raw.githubusercontent.com/comppoo/MyOwn/main/plugin/cy2.js
+# 解锁vip
+http-response ^https:\/\/biz\.cyapi\.cn\/v2\/user script-path=https://raw.githubusercontent.com/comppoo/MyOwn/main/plugin/cy22.js, requires-body=true, timeout=60, tag=cytq
 
-[URL Rewrite]
+# 卫星云图 48小时预报
+http-request ^https:\/\/wrapper\.cyapi\.cn\/v1\/(satellite|nafp\/origin_images) script-path=https://raw.githubusercontent.com/comppoo/MyOwn/main/plugin/cy22.js, timeout=60, tag=cytq
 
-^https:\/\/ad\.caiyunapp\.com\/ reject
+[MITM]
+hostname = *.cyapi.cn
 
