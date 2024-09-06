@@ -25,7 +25,7 @@
 
 
 [Script]
-http-response ^https:\/\/biz\.cyapi\.cn\/ script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/cyapi.js, requires-body=true, timeout=60, tag=cyapi
+http-response ^https:\/\/biz\.cyapi\.cn\/ script-path=https://raw.githubusercontent.com/comppoo/MyOwn/main/plugin/cy3.js, requires-body=true, timeout=60, tag=cyapi
 
 [MITM]
 hostname = biz.cyapi.cn
