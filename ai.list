@@ -14,7 +14,8 @@ DOMAIN-SUFFIX,perplexity.ai
 #Trae
 DOMAIN,pc-mon.zijieapi.com
 DOMAIN,trae-api-sg.mchost.guru
-
+DOMAIN-SUFFIX,cursor.sh
+DOMAIN-SUFFIX,cursor.com
 
 #Google Gemini 
 DOMAIN,bard.google.com
