@@ -19,6 +19,7 @@ DOMAIN-SUFFIX,cursor.com
 
 #
 DOMAIN,notebooklm.google
+DOMAIN,notebooklm.google.com
 
 #Google Gemini 
 DOMAIN,bard.google.com
