@@ -10,7 +10,12 @@ DOMAIN-SUFFIX,ciciai.com
 DOMAIN-SUFFIX,pplx.ai
 DOMAIN-SUFFIX,perplexity.ai
 
-
+DOMAIN-SUFFIX,amazonaws.com
+DOMAIN-SUFFIX,kiro.dev
+DOMAIN-SUFFIX,amazoncognito.com
+DOMAIN-SUFFIX,aws.dev
+DOMAIN-SUFFIX,a2z.com
+DOMAIN-SUFFIX,awsstatic.com
 
 
 
